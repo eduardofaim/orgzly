@@ -1,0 +1,50 @@
+start_test_server_in_background
+query("* id:'fab'")
+touch("* id:'fab'")
+query("* text:'Name'")
+query("* id:'dialog_input'")
+query("* id:'dialog_input'" { setText: "Test" })
+query "* id:'dialog_input'" { setText: "Test" }
+query "* id:'dialog_input'", { setText: "Test" }
+query("* id:'dialog_input'", { setText: "Test" })
+query("* id:'dialog_input'", { setText: "Test1" })
+element_exists("* id:'dialog_input'", { setText: "Test1" })
+element_exists("* id:'dialog_input'", { setText: 'Test1' })
+element_exists"* id:'dialog_input'", { setText: 'Test1' }
+element_exists "* id:'dialog_input'", { setText: 'Test1' }
+exits
+exit
+start_t
+start_test_server_in_background
+query("* text:'Test2'")
+query("* id:'item_book_tittle'")
+query("* id:'item_book_title'")
+query("* id:'item_book_title' text:'Test2'")
+touch("* id:'item_book_title' text:'Test2'")
+touch("* id:'fab'")
+touch("* id:'fragment_note_state'")
+query("* id:'item_auto_complete_container'")
+query("* id:'item_auto_complete_container' text:'TODO'")
+touch("* id:'item_auto_complete_container' text:'TODO'")
+query("* id:'fragment_note_title' text:'TODO'")
+query("* id:'fragment_note_title'")
+query("* id:'fragment_note_title'",{ setText: "Test2" }))
+query("* id:'fragment_note_title'", { setText: "Test2" }))
+query("* id:'fragment_note_title'", { setText: "Test2" })
+query("* id:'fragment_note_title'", { setText: ":title" })
+exit
+start_test_server_in_background
+start_test_server_in_backgd
+exit
+start_test_server_in_background
+query("* text:'Test2'")
+touch("* text:'Test2'")
+touch("* id:'button1'")
+query("* id:'item_book_title' text:'Test2'")
+touch("* id:'fab'")
+touch("* id:'fragment_note_state'")
+touch("* id:'item_auto_complete_container' text:'TODO'")
+query("* id:'fragment_note_title'")
+query("* id:'fragment_note_title'" , { setText: "Tralala"})
+query("* id:'fragment_note_title'" , { setText: [:title]})
+exit
